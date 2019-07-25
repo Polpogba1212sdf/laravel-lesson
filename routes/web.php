@@ -27,6 +27,10 @@ Route::get('/posts', 'PostAllController@index');
 
 Route::get('/create-post', 'PostController@post');
 
+Route::get('/task/{task}/subtask/', 'TaskController@createSubTask');
+
+Route::post('/task/{task}/subtask/', 'TaskController@storeSubTask');
+
 Route::post('/create-post', 'PostAllController@store');
 
 Route::get('/update-post/{post}', 'PostController@update');
