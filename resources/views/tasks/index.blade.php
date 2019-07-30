@@ -50,6 +50,32 @@
 			<h3>{{ $task->name }}</h3>
 			<div class="task-description">{{ $task->description }}</div>
 			<a href="/task/{{$task->id}}/subtask/">Add subtask</a>
+			
+			
+			<form action="ajax" method="POST" class="form-horizontal">
+			{{ csrf_field() }}
+
+			<div class="form-group">
+				<label for="task" class="col-sm-3 control-label">Name</label>
+				<div class="col-sm-6">
+					<input type="text" name="name" id="task-name" class="form-control">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-6">
+					<button type="submit" class="btn btn-default">
+						<i class="fa fa-plus"></i> Add subtask
+					</button>
+				</div>
+			</div>
+		</form>
+		
+		
+			@foreach ($task->subtasks as $subtask)
+			    <h6>{{ $subtask->name }}</h6>
+			    <h6>{{ $subtask->description }}</h6>
+			@endforeach
 		</div>
 		@endforeach
 	</div>

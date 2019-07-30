@@ -39,4 +39,6 @@ Route::post('/update-post/{post}', 'PostController@store');
 
 Route::get('/delete-post/{post}', 'PostController@delete');
 
+Route::get('/ajax', 'TaskController@ajax');
+
 

@@ -64,8 +64,12 @@ class TaskController extends Controller
             'name' => $request->name,
             'description' => $request->description
         ]);
-        
-        
+      
         return redirect('/tasks');
+    }
+    
+    public function ajax(Task $task, Request $request)
+    {
+        
     }
 }
