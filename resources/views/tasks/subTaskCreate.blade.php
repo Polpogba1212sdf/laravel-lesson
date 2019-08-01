@@ -7,7 +7,7 @@
 
 		@include('common.errors')
 
-		<form action="" method="POST" class="form-horizontal">
+		<form action="" method="POST" class="form-horizontal" id="form">
 			{{ csrf_field() }}
 
 			<div class="form-group">
@@ -24,7 +24,7 @@
 						class="form-control"></textarea>
 				</div>
 			</div>
-			
+		
 			
 
 			
@@ -39,4 +39,19 @@
 			</div>
 		</form>
 	</div>
+	<script type="text/javascript">
+
+$(function())
+	$('#form').submit(function(e){
+	alert(1);
+
+
+	
+})
+
+
+
+
+
+</script>	
 	@endsection
