@@ -37,8 +37,19 @@ Route::get('/update-post/{post}', 'PostController@update');
 
 Route::post('/update-post/{post}', 'PostController@store');
 
+
 Route::get('/delete-post/{post}', 'PostController@delete');
 
 Route::get('/ajax', 'TaskController@ajax');
 
+
+
+
+Route::get('/groups', 'GroupController@index');
+
+Route::get('/add-group', 'GroupController@addGroup');
+
+Route::post('/add-group', 'GroupController@storeGroup');
+
+Route::get('/update-group/{group}', 'GroupController@updateGroup');
 

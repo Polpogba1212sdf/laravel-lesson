@@ -87,6 +87,7 @@
                 <div class="links">
                 	<a href="{{url('/tasks')}}">Tasks</a>
                 	<a href="{{url('/posts')}}">Posts</a>
+                	<a href="{{url('/groups')}}">Groups</a>
                 </div>
             </div>
         </div>
