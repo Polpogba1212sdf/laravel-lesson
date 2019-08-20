@@ -11,9 +11,11 @@
 	
 		
 		
-			@foreach ($groups as $group)
+			@foreach ($students as $student)
 				<div>
-    			    <span>{{ $group->name }}</span>
+    			    <span>{{ $student->first_name }}</span>
+    			    <span>{{ $student->last_name }}</span>
+    			    <span>{{ $student->groups()->name }}</span>
     			    @if(Auth::user())
         			    <a href="update-group/{{$group->id}}">update</a>
         			    <a href="delete-group/{{$group->id}}">delete</a>
@@ -22,7 +24,7 @@
 			@endforeach
 			<br/>
 			@if(Auth::user())
-			    	<a href="add-group">Add group</a>
+			    	<a href="add-student">Add students</a>
 			@endif
 		
           

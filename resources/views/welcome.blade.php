@@ -88,6 +88,7 @@
                 	<a href="{{url('/tasks')}}">Tasks</a>
                 	<a href="{{url('/posts')}}">Posts</a>
                 	<a href="{{url('/groups')}}">Groups</a>
+                	<a href="{{url('/students')}}">Students</a>
                 </div>
             </div>
         </div>

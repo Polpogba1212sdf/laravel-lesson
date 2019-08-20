@@ -39,4 +39,25 @@ class GroupController extends Controller
             'group' => $group,
         ]);
     }
+    
+    public function storeUpdateGroup($group,Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|max:255'
+        ]);
+        
+        $group = Group::find($group);
+        
+        $group->name = $request->name;
+        $group->save();
+        return redirect('/groups');
+        
+    }
+    
+    public function deleteGroup(Group $group)
+    {
+        $group->delete();
+        return redirect('/groups');
+        
+    }
 }

@@ -45,11 +45,20 @@ Route::get('/ajax', 'TaskController@ajax');
 
 
 
-Route::get('/groups', 'GroupController@index');
+Route::get('/groups', 'StudentController@index');
 
 Route::get('/add-group', 'GroupController@addGroup');
 
 Route::post('/add-group', 'GroupController@storeGroup');
 
 Route::get('/update-group/{group}', 'GroupController@updateGroup');
+
+Route::post('/update-group/{group}', 'GroupController@storeUpdateGroup');
+
+Route::get('/delete-group/{group}', 'GroupController@deleteGroup');
+
+
+Route::get('/students', 'StudentController@index');
+Route::get('/add-student', 'StudentController@addStudent');
+
 
